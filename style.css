@@ -318,10 +318,27 @@ body {
 .add-top {margin-top: 20px;}
 
 .nodisplay {display: none;}
+/* bootstrap override*/
+
+.oneArticle .page-header
+{
+    margin: 0px 0px 20px;
+}
+
+/*//bootstrap override*/
+
 
 .content-cont
 {
     margin-top:60px;
+
+}
+
+.oneArticle
+{
+  border:1px solid #a1a1a1;
+    padding:0 15px 20px 15px;
+    margin-bottom:15px;
 }
 .addToCart
 {
