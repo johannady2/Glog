@@ -319,7 +319,10 @@ body {
 
 .nodisplay {display: none;}
 
-
+.content-cont
+{
+    margin-top:60px;
+}
 .addToCart
 {
     width:100%;
