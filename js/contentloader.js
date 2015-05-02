@@ -21,15 +21,27 @@
          }
          else
          {
-              $(this).parent().addClass('active');/* .not('.navbar-brand')*/
-        
+             $(this).parent().addClass('active');/* .not('.navbar-brand')*/
+              
+
          }
          
+
             var loadThisContent = $(this).attr('href');
-         
-            $(".content-cont").load(loadThisContent);
+         $(".content-cont").load(loadThisContent);
+          //  $(".content-cont").load(loadThisContent,  null, function() {});
+          
+
+
+              /*//masonry code*/
+
+
         });
 
      
      
  });
+
+
+ 
+         
