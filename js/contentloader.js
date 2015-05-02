@@ -4,11 +4,15 @@
      
      $('.navbar-nav > li > a[href="'+defaultContent+'"]').parent().addClass('active');
      
-     
+      /* $('.navbar-nav > li > a , .navbar-brand').on("custom.navclick",function(event){
+            alert(event.namespace);
+        });*/
      
      $('.navbar-nav > li > a , .navbar-brand').on( "click", function(event) 
         {
             event.preventDefault();
+        // $(this).trigger("custom.navclick");
+    
          
           $('.active').removeClass('active');
          
@@ -32,7 +36,7 @@
           //  $(".content-cont").load(loadThisContent,  null, function() {});
           
 
-
+    handleData();
               /*//masonry code*/
 
 

@@ -1,7 +1,8 @@
-$(document).ready(function(){
+  $(document).ajaxComplete(function(event, xhr, settings) {
+
    
     //var LS1 = "testing1";
-   
+   alert('content loaded');
     
     var item1 = new Array();// or var arr = [];
     item1.push('item 1 detail_1');
@@ -33,6 +34,6 @@ $(document).ready(function(){
     $('.localstoragetest').append("itemslist_LS(string): "+window.localStorage["itemslist_LS"] + "<br><br>");
     $('.localstoragetest').append("itemslist(array): "+itemslist);
  
-    console.log(itemslist);//in console log, itemslist is an array
-    console.log( window.localStorage["itemslist_LS"]);//in console log, itemslist_LS is just a string
+    alert(itemslist);//in console log, itemslist is an array
+    alert( window.localStorage["itemslist_LS"]);//in console log, itemslist_LS is just a string
 });
