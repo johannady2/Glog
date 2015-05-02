@@ -325,11 +325,17 @@ article .page-header
     margin: 0px 0px 20px;
 }
 
+article .entry-title
+{
+    margin: 0px;
+}
+
 /*//bootstrap override*/
 
 .content-cont
 {
     margin-top:60px;
+    margin-bottom: 60px;
 
 }
 
