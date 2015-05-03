@@ -4,20 +4,17 @@
      
      $('.navbar-nav > li > a[href="'+defaultContent+'"]').parent().addClass('active');
      
-      /* $('.navbar-nav > li > a , .navbar-brand').on("custom.navclick",function(event){
-            alert(event.namespace);
-        });*/
-     
-     $('.navbar-nav > li > a , .navbar-brand').on( "click", function(event) 
+
+      
+     $('.navbar-nav > li > a , .navbar-brand').on( "click", function(e) 
         {
-            event.preventDefault();
-        // $(this).trigger("custom.navclick");
-    
-         
+            e.preventDefault();
+
           $('.active').removeClass('active');
          
+         var currenthrefclass = $(this).attr('class');
          
-         if($(this).attr('class') == 'navbar-brand')
+         if( currenthrefclass == 'navbar-brand')
          {
             var navbarContent = $(this).attr('href');
              
@@ -32,13 +29,12 @@
          
 
             var loadThisContent = $(this).attr('href');
-         $(".content-cont").load(loadThisContent);
-          //  $(".content-cont").load(loadThisContent,  null, function() {});
+         //$(".content-cont").load(loadThisContent);
+           $(".content-cont").load(loadThisContent,  null, function() {
+        
+            navClickedAndContentContReady();//trigger is in callback of .content-cont to ensure that this div is loaded first, before the data is appended.
+           });
           
-
-    handleData();
-              /*//masonry code*/
-
 
         });
 
@@ -46,6 +42,12 @@
      
  });
 
+function navClickedAndContentContReady()
+{//e.stopPropagation();
+
+    $(document).trigger('navClicked');/* add parameterby ('navclick',e.target.id);*/
+    
+}
 
  
          
