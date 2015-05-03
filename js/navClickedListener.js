@@ -1,6 +1,8 @@
-  $(document).on('navClicked',function() {
+  $(document).on('navClicked',function(event,filename) {
 
-
+      if(filename == "test-localstorage.html")
+      {
+        
         //var LS1 = "testing1";  
         var item1 = new Array();// or var arr = [];
         item1.push('item 1 detail_1');
@@ -32,7 +34,6 @@
         $('.localstoragetest').append("itemslist_LS(string): "+window.localStorage["itemslist_LS"] + "<br><br>");
         $('.localstoragetest').append("itemslist(array): "+itemslist);
 
-        console.log(itemslist);//in console log, itemslist is an array
-        console.log( window.localStorage["itemslist_LS"]);//in console log, itemslist_LS is just a string
+      }
    
 });

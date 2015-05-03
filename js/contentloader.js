@@ -27,12 +27,13 @@
 
          }
          
-
-            var loadThisContent = $(this).attr('href');
-         //$(".content-cont").load(loadThisContent);
-           $(".content-cont").load(loadThisContent,  null, function() {
         
-            navClickedAndContentContReady();//trigger is in callback of .content-cont to ensure that this div is loaded first, before the data is appended.
+         
+            var loadThisContent = $(this).attr('href');
+            //$(".content-cont").load(loadThisContent);
+           $(".content-cont").load(loadThisContent,  null, function(event,filename) {
+            var filename = loadThisContent;
+            navClickedAndContentContReady(event,filename);//trigger is in callback of .content-cont to ensure that this div is loaded first, before the data is appended.
            });
           
 
@@ -42,10 +43,10 @@
      
  });
 
-function navClickedAndContentContReady()
-{//e.stopPropagation();
+function navClickedAndContentContReady(event,filename)
+{//e.stopPropagation();//dunno what this is for but tutorial used this and he said it's better not to use this
 
-    $(document).trigger('navClicked');/* add parameterby ('navclick',e.target.id);*/
+    $(document).trigger('navClicked',[filename]);/* add parameter by ('navclick',e.target.id);*/
     
 }
 
