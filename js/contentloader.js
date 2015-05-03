@@ -1,4 +1,6 @@
  $(document).ready(function(){
+
+     
      var defaultContent = 'scan.html';
       $(".content-cont").load(defaultContent);/* default content*/
      

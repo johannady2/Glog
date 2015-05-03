@@ -14,4 +14,5 @@ Johanna Cristine C. Dy
 </author>
 <icon src="icon.png" />
 <gap:splash src="splash.png" />
+<gap:plugin name="com.millerjames01.sqlite-plugin" version="1.0.1" />
 </widget>
